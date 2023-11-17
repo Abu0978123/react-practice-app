@@ -12,7 +12,11 @@ import { Pagination } from "./pagination/Pagination";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Home from "./redux/Home";
-
+import Memo from "./Memo/Memo";
+import Callback from "./UseCallback/Callback";
+import ControlComp from "./ControlComp/ControlComp";
+import Timer from "./Timer/Timer";
+import Comp from "./UncontrollComp/Comp";
 function App() {
   return (
     <div>
@@ -42,11 +46,35 @@ function App() {
     <CustomPagination/>
     </div>
 
+    <div className="custom-pagination" style={{borderBottom: "8px black solid"}}>
+    <h1 style={{color: "red"}}>UseMemo hook</h1>
+    <Memo/>
+    </div>
+
+    <div className="custom-pagination" style={{borderBottom: "8px black solid"}}>
+    <h1 style={{color: "red"}}>UseCallback hook</h1>
+    <Callback/>
+    </div>
+
+    <div className="custom-pagination" style={{borderBottom: "8px black solid"}}>
+    <h1 style={{color: "red"}}>Control Component hook</h1>
+    <ControlComp/>
+    </div>
+
+    <div className="custom-pagination" style={{borderBottom: "8px black solid"}}>
+    <h1 style={{color: "red"}}>UnControl Component hook</h1>
+    <Comp/>
+    </div>
+
+    <div className="custom-pagination" style={{borderBottom: "8px black solid"}}>
+    <h1 style={{color: "red"}}>Live Time</h1>
+    <Timer/>
+    </div>
+
     <div className="form" style={{marginBottom: "20px"}}>
     <Form/>
     </div>
 
-    
     </div>
    
   );
